@@ -239,3 +239,11 @@
 2021-06-17 12:43:44 | [INFO]    | Shard 0 : Received READY
 2021-06-17 13:07:28 | [INFO]    | Discordia 2.9.1
 2021-06-17 13:07:28 | [INFO]    | Connecting to Discord...
+2021-06-17 13:15:47 | [INFO]    | Discordia 2.9.1
+2021-06-17 13:15:47 | [INFO]    | Connecting to Discord...
+2021-06-17 13:15:48 | [ERROR]   | 401 - Unauthorized : GET https://discord.com/api/v7/users/@me
+2021-06-17 13:15:48 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2021-06-17 13:15:57 | [INFO]    | Discordia 2.9.1
+2021-06-17 13:15:57 | [INFO]    | Connecting to Discord...
+2021-06-17 13:15:57 | [ERROR]   | 401 - Unauthorized : GET https://discord.com/api/v7/users/@me
+2021-06-17 13:15:57 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized

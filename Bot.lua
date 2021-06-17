@@ -28,4 +28,4 @@ client:on("ready", function()
     print(client:getChannel("759254539139285063"))
 end)
 
-client:run("Bot ODU1MDg0NTY4NDA3MDQ4MTky.YMtVjw.FZ4ipkOsMkAq2Z24iAcXC-68rCY")
+client:run("Bot "..io.read())
