@@ -1,0 +1,550 @@
+2021-06-18 10:22:34 | [INFO]    | Discordia 2.9.1
+2021-06-18 10:22:34 | [INFO]    | Connecting to Discord...
+2021-06-18 10:22:34 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 10:22:34 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 10:22:34 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 10:22:34 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 10:22:34 | [INFO]    | Shard 0 : Received READY
+2021-06-18 10:26:31 | [INFO]    | Discordia 2.9.1
+2021-06-18 10:26:31 | [INFO]    | Connecting to Discord...
+2021-06-18 10:26:31 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 10:26:31 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 10:26:31 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 10:26:31 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 10:26:32 | [INFO]    | Shard 0 : Received READY
+2021-06-18 10:32:40 | [INFO]    | Discordia 2.9.1
+2021-06-18 10:32:40 | [INFO]    | Connecting to Discord...
+2021-06-18 10:32:40 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 10:32:40 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 10:32:40 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 10:32:40 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 10:32:40 | [INFO]    | Shard 0 : Received READY
+2021-06-18 11:50:27 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:50:27 | [INFO]    | Connecting to Discord...
+2021-06-18 11:50:27 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 11:50:27 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 11:50:27 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 11:50:27 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 11:50:28 | [INFO]    | Shard 0 : Received READY
+2021-06-18 11:52:16 | [WARNING] | Shard 0 : 1000 - Connection closed
+2021-06-18 11:52:16 | [INFO]    | Shard 0 : Disconnected
+2021-06-18 11:52:16 | [INFO]    | Shard 0 : Reconnecting after 1075 ms...
+2021-06-18 11:52:45 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:52:45 | [INFO]    | Connecting to Discord...
+2021-06-18 11:52:46 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 11:52:46 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 11:52:46 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 11:52:46 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 11:52:46 | [INFO]    | Shard 0 : Received READY
+2021-06-18 11:53:45 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:53:45 | [INFO]    | Connecting to Discord...
+2021-06-18 11:53:45 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 11:53:45 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 11:53:45 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 11:53:45 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 11:53:45 | [INFO]    | Shard 0 : Received READY
+2021-06-18 11:54:40 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:54:40 | [INFO]    | Connecting to Discord...
+2021-06-18 11:54:40 | [ERROR]   | 401 - Unauthorized : GET https://discord.com/api/v7/users/@me
+2021-06-18 11:54:40 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2021-06-18 11:54:43 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:54:43 | [INFO]    | Connecting to Discord...
+2021-06-18 11:54:43 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 11:54:43 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 11:54:43 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 11:54:43 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 11:54:43 | [INFO]    | Shard 0 : Received READY
+2021-06-18 11:56:05 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:56:05 | [INFO]    | Connecting to Discord...
+2021-06-18 11:56:05 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 11:56:05 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 11:56:05 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 11:56:05 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 11:56:05 | [INFO]    | Shard 0 : Received READY
+2021-06-18 11:56:35 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:56:35 | [INFO]    | Connecting to Discord...
+2021-06-18 11:56:35 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 11:56:35 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 11:56:35 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 11:56:35 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 11:56:35 | [INFO]    | Shard 0 : Received READY
+2021-06-18 11:57:24 | [INFO]    | Discordia 2.9.1
+2021-06-18 11:57:24 | [INFO]    | Connecting to Discord...
+2021-06-18 11:57:24 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 11:57:24 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 11:57:24 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 11:57:24 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 11:57:25 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:03:26 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:03:26 | [INFO]    | Connecting to Discord...
+2021-06-18 12:03:26 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:03:26 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:03:26 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:03:26 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:03:26 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:06:36 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:06:36 | [INFO]    | Connecting to Discord...
+2021-06-18 12:06:36 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:06:36 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:06:36 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:06:36 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:06:36 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:09:06 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:09:06 | [INFO]    | Connecting to Discord...
+2021-06-18 12:09:06 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:09:06 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:09:06 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:09:06 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:09:06 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:11:23 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:11:23 | [INFO]    | Connecting to Discord...
+2021-06-18 12:11:23 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:11:23 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:11:23 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:11:23 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:11:23 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:13:08 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:13:08 | [INFO]    | Connecting to Discord...
+2021-06-18 12:13:08 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:13:08 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:13:08 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:13:08 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:13:08 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:24:50 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:24:50 | [INFO]    | Connecting to Discord...
+2021-06-18 12:24:50 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:24:50 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:24:50 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:24:50 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:24:50 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:25:36 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:25:36 | [INFO]    | Connecting to Discord...
+2021-06-18 12:25:36 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:25:36 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:25:36 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:25:36 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:25:36 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:26:55 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:26:55 | [INFO]    | Connecting to Discord...
+2021-06-18 12:26:55 | [ERROR]   | 401 - Unauthorized : GET https://discord.com/api/v7/users/@me
+2021-06-18 12:26:55 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2021-06-18 12:27:01 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:27:01 | [INFO]    | Connecting to Discord...
+2021-06-18 12:27:01 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:27:01 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:27:01 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:27:01 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:27:01 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:27:43 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:27:43 | [INFO]    | Connecting to Discord...
+2021-06-18 12:27:44 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:27:44 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:27:44 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:27:44 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:27:44 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:29:02 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:29:02 | [INFO]    | Connecting to Discord...
+2021-06-18 12:29:02 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:29:02 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:29:02 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:29:02 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:29:02 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:29:38 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:29:38 | [INFO]    | Connecting to Discord...
+2021-06-18 12:29:38 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:29:38 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:29:38 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:29:38 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:29:38 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:30:44 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:30:44 | [INFO]    | Connecting to Discord...
+2021-06-18 12:30:44 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:30:44 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:30:44 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:30:44 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:30:44 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:31:33 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:31:33 | [INFO]    | Connecting to Discord...
+2021-06-18 12:31:33 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:31:33 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:31:34 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:31:34 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:31:34 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:32:16 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:32:16 | [INFO]    | Connecting to Discord...
+2021-06-18 12:32:16 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:32:16 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:32:16 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:32:16 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:32:16 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:33:23 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:33:23 | [INFO]    | Connecting to Discord...
+2021-06-18 12:33:23 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:33:23 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:33:23 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:33:23 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:33:23 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:34:58 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:34:58 | [INFO]    | Connecting to Discord...
+2021-06-18 12:34:58 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:34:58 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:34:58 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:34:58 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:34:59 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:37:50 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:37:50 | [INFO]    | Connecting to Discord...
+2021-06-18 12:37:50 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:37:50 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:37:50 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:37:50 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:37:50 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:40:29 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:40:29 | [INFO]    | Connecting to Discord...
+2021-06-18 12:40:29 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:40:29 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:40:29 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:40:29 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:40:29 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:47:09 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:47:09 | [INFO]    | Connecting to Discord...
+2021-06-18 12:47:09 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:47:09 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:47:09 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:47:09 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:47:09 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:49:32 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:49:32 | [INFO]    | Connecting to Discord...
+2021-06-18 12:49:33 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:49:33 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:49:33 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:49:33 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:49:33 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:50:51 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:50:51 | [INFO]    | Connecting to Discord...
+2021-06-18 12:50:51 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:50:51 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:50:52 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:50:52 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:50:52 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:51:18 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:51:18 | [INFO]    | Connecting to Discord...
+2021-06-18 12:51:18 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:51:18 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:51:18 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:51:18 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:51:18 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:53:39 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:53:39 | [INFO]    | Connecting to Discord...
+2021-06-18 12:53:39 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:53:39 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:53:39 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:53:39 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:53:40 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:53:44 | [ERROR]   | 403 - Forbidden : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855490028892192798
+2021-06-18 12:54:37 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:54:37 | [INFO]    | Connecting to Discord...
+2021-06-18 12:54:37 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:54:37 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:54:37 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:54:37 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:54:37 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:55:53 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:55:53 | [INFO]    | Connecting to Discord...
+2021-06-18 12:55:53 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:55:53 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:55:53 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:55:53 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:55:53 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:57:36 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:57:36 | [INFO]    | Connecting to Discord...
+2021-06-18 12:57:36 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:57:36 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:57:36 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:57:36 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:57:36 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:57:54 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:57:54 | [INFO]    | Connecting to Discord...
+2021-06-18 12:57:54 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:57:54 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:57:54 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:57:54 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:57:54 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:58:06 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:58:06 | [INFO]    | Connecting to Discord...
+2021-06-18 12:58:06 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:58:06 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:58:06 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:58:06 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:58:06 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:58:55 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:58:55 | [INFO]    | Connecting to Discord...
+2021-06-18 12:58:55 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:58:55 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:58:55 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:58:55 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:58:55 | [INFO]    | Shard 0 : Received READY
+2021-06-18 12:59:55 | [INFO]    | Discordia 2.9.1
+2021-06-18 12:59:55 | [INFO]    | Connecting to Discord...
+2021-06-18 12:59:55 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 12:59:55 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 12:59:55 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 12:59:55 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 12:59:55 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:07:09 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:07:09 | [INFO]    | Connecting to Discord...
+2021-06-18 13:07:09 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:07:09 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:07:09 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:07:09 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:07:09 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:08:37 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:08:37 | [INFO]    | Connecting to Discord...
+2021-06-18 13:08:37 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:08:37 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:08:37 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:08:37 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:08:37 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:09:51 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:09:51 | [INFO]    | Connecting to Discord...
+2021-06-18 13:09:51 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:09:51 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:09:51 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:09:51 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:09:51 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:10:23 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:10:23 | [INFO]    | Connecting to Discord...
+2021-06-18 13:10:23 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:10:23 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:10:23 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:10:23 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:10:23 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:18:01 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:18:01 | [INFO]    | Connecting to Discord...
+2021-06-18 13:18:01 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:18:01 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:18:01 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:18:01 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:18:01 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:18:02 | [ERROR]   | 400 - Bad Request : POST https://discord.com/api/v7/channels/855208944607559711/messages
+2021-06-18 13:22:06 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:22:06 | [INFO]    | Connecting to Discord...
+2021-06-18 13:22:06 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:22:06 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:22:07 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:22:07 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:22:07 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:27:50 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:27:50 | [INFO]    | Connecting to Discord...
+2021-06-18 13:27:50 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:27:50 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:27:50 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:27:50 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:27:51 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:29:04 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:29:04 | [INFO]    | Connecting to Discord...
+2021-06-18 13:29:04 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:29:04 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:29:04 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:29:04 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:29:04 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:30:05 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:30:05 | [INFO]    | Connecting to Discord...
+2021-06-18 13:30:05 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:30:05 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:30:05 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:30:05 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:30:05 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:30:33 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:30:33 | [INFO]    | Connecting to Discord...
+2021-06-18 13:30:33 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:30:33 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:30:33 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:30:33 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:30:33 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:31:00 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:31:00 | [INFO]    | Connecting to Discord...
+2021-06-18 13:31:00 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:31:00 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:31:00 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:31:00 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:31:00 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:31:50 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:31:50 | [INFO]    | Connecting to Discord...
+2021-06-18 13:31:50 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:31:50 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:31:50 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:31:50 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:31:50 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:32:25 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:32:25 | [INFO]    | Connecting to Discord...
+2021-06-18 13:32:25 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:32:25 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:32:25 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:32:25 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:32:26 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:32:54 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:32:54 | [INFO]    | Connecting to Discord...
+2021-06-18 13:32:54 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:32:54 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:32:54 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:32:54 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:32:54 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:33:41 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:33:41 | [INFO]    | Connecting to Discord...
+2021-06-18 13:33:41 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:33:41 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:33:41 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:33:41 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:33:41 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:34:04 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:34:04 | [INFO]    | Connecting to Discord...
+2021-06-18 13:34:04 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:34:04 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:34:04 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:34:04 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:34:04 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:34:57 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:34:57 | [INFO]    | Connecting to Discord...
+2021-06-18 13:34:58 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:34:58 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:34:58 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:34:58 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:34:58 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:39:54 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:39:54 | [INFO]    | Connecting to Discord...
+2021-06-18 13:39:54 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:39:54 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:39:54 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:39:54 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:39:54 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:50:30 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:50:30 | [INFO]    | Connecting to Discord...
+2021-06-18 13:50:30 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:50:30 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:50:30 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:50:30 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:50:30 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:50:31 | [ERROR]   | 400 - Bad Request : POST https://discord.com/api/v7/channels/855208944607559711/messages
+2021-06-18 13:51:05 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:51:05 | [INFO]    | Connecting to Discord...
+2021-06-18 13:51:05 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:51:05 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:51:05 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:51:05 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:51:05 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:54:32 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:54:32 | [INFO]    | Connecting to Discord...
+2021-06-18 13:54:32 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:54:32 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:54:32 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:54:32 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:54:33 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:54:33 | [ERROR]   | 400 - Bad Request : POST https://discord.com/api/v7/channels/855208944607559711/messages
+2021-06-18 13:55:16 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:55:16 | [INFO]    | Connecting to Discord...
+2021-06-18 13:55:16 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:55:16 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:55:16 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:55:16 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:55:16 | [INFO]    | Shard 0 : Received READY
+2021-06-18 13:58:33 | [INFO]    | Discordia 2.9.1
+2021-06-18 13:58:33 | [INFO]    | Connecting to Discord...
+2021-06-18 13:58:33 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 13:58:33 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 13:58:33 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 13:58:33 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 13:58:33 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:03:16 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:03:16 | [INFO]    | Connecting to Discord...
+2021-06-18 14:03:16 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:03:16 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:03:16 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:03:16 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:03:16 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:05:20 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:05:20 | [INFO]    | Connecting to Discord...
+2021-06-18 14:05:21 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:05:21 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:05:21 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:05:21 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:05:21 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:10:56 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:10:56 | [INFO]    | Connecting to Discord...
+2021-06-18 14:10:56 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:10:56 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:10:56 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:10:56 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:10:56 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:12:20 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:12:20 | [INFO]    | Connecting to Discord...
+2021-06-18 14:12:20 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:12:20 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:12:20 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:12:20 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:12:20 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:12:22 | [WARNING] | 429 - Too Many Requests : retrying after 3185 ms : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855509938594643978
+2021-06-18 14:12:27 | [WARNING] | 429 - Too Many Requests : retrying after 3254 ms : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510041448808489
+2021-06-18 14:12:32 | [WARNING] | 429 - Too Many Requests : retrying after 2965 ms : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510025144631306
+2021-06-18 14:12:37 | [WARNING] | 429 - Too Many Requests : retrying after 3071 ms : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855509979342307329
+2021-06-18 14:14:04 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:14:04 | [INFO]    | Connecting to Discord...
+2021-06-18 14:14:04 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:14:04 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:14:04 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:14:04 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:14:04 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:14:30 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:14:30 | [INFO]    | Connecting to Discord...
+2021-06-18 14:14:30 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:14:30 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:14:31 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:14:31 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:14:31 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:15:27 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:15:27 | [INFO]    | Connecting to Discord...
+2021-06-18 14:15:27 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:15:27 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:15:27 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:15:27 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:15:28 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:15:52 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:15:52 | [INFO]    | Connecting to Discord...
+2021-06-18 14:15:52 | [ERROR]   | 401 - Unauthorized : GET https://discord.com/api/v7/users/@me
+2021-06-18 14:15:52 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2021-06-18 14:15:54 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:15:54 | [INFO]    | Connecting to Discord...
+2021-06-18 14:15:54 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:15:54 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:15:54 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:15:54 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:15:54 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:16:02 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:16 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:16 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:16 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:17 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:17 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:21 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:22 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:22 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:22 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:23 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:26 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:26 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:27 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:27 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:16:28 | [ERROR]   | 404 - Not Found : DELETE https://discord.com/api/v7/channels/855208944607559711/messages/855510393508986910
+2021-06-18 14:22:57 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:22:57 | [INFO]    | Connecting to Discord...
+2021-06-18 14:22:57 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:22:57 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:22:57 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:22:57 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:22:58 | [INFO]    | Shard 0 : Received READY
+2021-06-18 14:29:11 | [INFO]    | Discordia 2.9.1
+2021-06-18 14:29:11 | [INFO]    | Connecting to Discord...
+2021-06-18 14:29:12 | [INFO]    | Authenticated as Ban Appelas#6522
+2021-06-18 14:29:12 | [INFO]    | Launching shard 0 (1 out of 1)...
+2021-06-18 14:29:12 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2021-06-18 14:29:12 | [INFO]    | Shard 0 : Received HELLO
+2021-06-18 14:29:12 | [INFO]    | Shard 0 : Received READY
