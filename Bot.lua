@@ -4,8 +4,9 @@ local cron = require('cron.cron')
 local data
 local client = discordia.Client()
 local date = discordia.Date()
-local pause = 5
+local pause
 local appealchannel
+local logchannel
 local approvalcount
 local approvalratio
 local appealweb
@@ -14,12 +15,14 @@ local botuserid = "855084568407048192"
 local appealtable = {}
 local awaiting = {}
 local cronstorage = {}
+local templog = {}
 
 function overwritedata(new)
     local temp = io.open("settings.json", "r+")
     temp:write(json.encode(new))
     temp:close()
     appealchannel = client:getChannel(data.appealchannel)
+    logchannel = client:getChannel(data.logchannel)
     pause = data.pause
     approvalcount = data.approvalcount
     approvalratio = data.approvalratio
@@ -31,10 +34,8 @@ end
 
 function awaitembed(message, count, ratio)
     local embed = message.embed
-    local player, userid = message.author.username:match("^[^%s]+"), message.author.username:match("%b[]")
-    userid = userid:match("%d+")
-    awaiting[player] = {message}
-    message:reply{
+    local player, userid = message.author.username:match("^[^%s]+"), message.author.username:match("%b[]"):match("%d+")
+    awaiting[player] = {message, message:reply{
         embed = {
             title = "Ban Appeal Approved!", 
             description = string.format("[%s](https://discord.com/channels/%s/%s/%s) has been unbanned with a like count of %s and a like ratio of %d%%.", player, message.guild.id, message.channel.id, message.id, count, ratio),
@@ -43,7 +44,23 @@ function awaitembed(message, count, ratio)
                 text = "This message and the message linked above will be deleted once the user is unbanned."
             }
         }
-    }
+    }}
+    for _,v in logmessages:__pairs() do
+        if v.embed then
+            if v.embed.color == 16751710 then
+                local eplayer, euserid = v.author.username:match("^[^%s]+"), v.author.username:match("%b[]"):match("%d+")
+                if eplayer == player then
+                    if date.parseISO(v.timestamp) < date.parseISO(message.timestamp) then
+                        if awaiting[player] then
+                            awaiting[player][1]:delete()
+                            awaiting[player][2]:delete()
+                            awaiting[player] = nil
+                        end
+                    end
+                end
+            end
+        end
+    end
 end
 
 function periodiccheck(message)
@@ -56,9 +73,7 @@ function periodiccheck(message)
         end
     end
     if liked.count >= approvalcount and math.floor(liked.count/(liked.count + disliked.count)*100+.5) > approvalratio then
-        coroutine.resume(coroutine.create(function()
-            awaitembed(message, liked.count, math.floor(liked.count/(liked.count + disliked.count)*100+.5))
-        end))
+        awaitembed(message, liked.count, math.floor(liked.count/(liked.count + disliked.count)*100+.5))
     else
         appealtable[message.id] = nil
         message:delete()
@@ -74,14 +89,16 @@ end
 
 function runcron()
     for i,v in pairs(cronstorage) do
-        v:reset()
         if v:update(os.time()) then
             cronstorage[i] = nil
+        else
+            v:reset()
         end
     end
 end
 
 function initializenew()
+    local logmessages = logchannel:getMessages(100)
     local messages = appealchannel:getMessages(100)
     appealtable = {}
     for _,v in messages:__pairs() do
@@ -113,6 +130,15 @@ client:on("messageCreate", function(message)
     if not success then print(result) end
     if message.webhookId == appealweb then
         register(message)
+    elseif message.webhookId == logweb then
+        if message.embed.color == 16751710 then
+            local player, userid = message.author.username:match("^[^%s]+"), message.author.username:match("%b[]"):match("%d+")
+            if awaiting[player] then
+                awaiting[player][1]:delete()
+                awaiting[player][2]:delete()
+                awaiting[player] = nil
+            end
+        end
     elseif message.author.id == "201461802406641664" then
         if message.content:find('^"') then
             local cmd = message.content:match("^[^%s]+") cmd = cmd:sub(2,cmd:len())
@@ -122,6 +148,16 @@ client:on("messageCreate", function(message)
                     overwritedata(data)
                     data.appealchannel = extracted
                     message:reply(string.format("Successfully changed ban appeals channel to <#%s>.", extracted))
+                    initializenew()
+                else
+                    message:reply("Invalid channel ID.")
+                end
+            elseif cmd:lower() == "linit" then
+                local extracted = message.content:match("[^%s]+$")
+                if client:getChannel(extracted) then
+                    overwritedata(data)
+                    data.logchannel = extracted
+                    message:reply(string.format("Successfully changed logs channel to <#%s>.", extracted))
                     initializenew()
                 else
                     message:reply("Invalid channel ID.")
@@ -156,7 +192,7 @@ client:on("messageCreate", function(message)
             elseif cmd:lower() == "setappealweb" then
                 local extracted = message.content:match("[^%s]+$")
                 if tonumber(extracted) ~= nil then
-                    data.appealweb = tonumber(extracted)
+                    data.appealweb = extracted
                     overwritedata(data)
                     message:reply(string.format("Appeals webhook set to %s.", extracted))
                 else
@@ -165,7 +201,7 @@ client:on("messageCreate", function(message)
             elseif cmd:lower() == "setlogweb" then
                 local extracted = message.content:match("[^%s]+$")
                 if tonumber(extracted) ~= nil then
-                    data.logweb = tonumber(extracted)
+                    data.logweb = extracted
                     overwritedata(data)
                     message:reply(string.format("Logs webhook set to %s.", extracted))
                 else
@@ -181,6 +217,7 @@ client:on("ready", function()
     data = json.decode(file:read())
     io.close(file)
     appealchannel = client:getChannel(data.appealchannel)
+    logchannel = client:getChannel(data.logchannel)
     pause = data.pause
     approvalcount = data.approvalcount
     approvalratio = data.approvalratio
