@@ -82,5 +82,5 @@ client:on("ready", function()
     appealchannel = client:getChannel(data.appealchannel)
 end)
 
--- delete this before pushing to github xd ODU1MDg0NTY4NDA3MDQ4MTky.YMtVjw.m5Fb-gpaVuI5CfdUNW6lMLL4dhc
-client:run("Bot ODU1MDg0NTY4NDA3MDQ4MTky.YMtVjw.m5Fb-gpaVuI5CfdUNW6lMLL4dhc")
+-- delete this before pushing to github xd 
+client:run("Bot "..io.read())
