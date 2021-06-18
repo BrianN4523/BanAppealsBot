@@ -58,18 +58,29 @@ client:on("messageCreate", function(message)
     runcron()
     if message.webhookId == appealweb then
         register(message)
-    elseif message.content:find('^"') then
-        local cmd = message.content:match("^[^%s]+") cmd = cmd:sub(2,cmd:len())
-        print(cmd)
+    elseif message.author.id == "201461802406641664" then
+        if message.content:find('^"') then
+            local cmd = message.content:match("^[^%s]+") cmd = cmd:sub(2,cmd:len())
+            if cmd:lower() == "ainit" then
+                local extracted = message.content:match("[^%s]+$")
+                if client:getChannel(extracted) then
+                    data.appealchannel = extracted
+                    overwritedata(data)
+                    message:reply("Successfully changed ban appeals channel!")
+                else
+                    message:reply("Invalid channel ID!")
+                end
+            end
+        end
     end
 end)
 
 client:on("ready", function()
-    file = io.open("data.json", "r+")
+    local file = io.open("data.json", "r+")
     data = json.decode(file:read())
     io.close(file)
     appealchannel = client:getChannel(data.appealchannel)
 end)
 
--- delete this before pushing to github xd ODU1MDg0NTY4NDA3MDQ4MTky.YMtVjw.ev7c6kP8Cf3Chp0ycx8R484R6mM
-client:run("Bot ODU1MDg0NTY4NDA3MDQ4MTky.YMtVjw.ev7c6kP8Cf3Chp0ycx8R484R6mM")
+-- delete this before pushing to github xd ODU1MDg0NTY4NDA3MDQ4MTky.YMtVjw.m5Fb-gpaVuI5CfdUNW6lMLL4dhc
+client:run("Bot ODU1MDg0NTY4NDA3MDQ4MTky.YMtVjw.m5Fb-gpaVuI5CfdUNW6lMLL4dhc")
