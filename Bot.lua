@@ -68,13 +68,17 @@ function periodiccheck(message)
     local liked, disliked
     for _,v in message.reactions:__pairs() do
         if v.emojiHash == "👍" then
-            liked = v
+            liked = v.count - 1
         elseif v.emojiHash == "👎" then
-            disliked = v
+            disliked = v.count - 1
         end
     end
-    if liked.count >= approvalcount and math.floor(liked.count/(liked.count + disliked.count)*100+.5) > approvalratio then
-        awaitembed(message, liked.count, math.floor(liked.count/(liked.count + disliked.count)*100+.5))
+    local ratio = math.floor(liked/(liked + disliked)*100+.5)
+    if ratio ~= ratio then
+        ratio = 0
+    end
+    if liked >= approvalcount and ratio > approvalratio then
+        awaitembed(message, liked, ratio)
     else
         appealtable[message.id] = nil
         message:delete()
