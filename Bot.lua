@@ -45,10 +45,11 @@ function awaitembed(message, count, ratio)
             }
         }
     }}
-    for _,v in logmessages:__pairs() do
+    for _,v in templog:__pairs() do
         if v.embed then
             if v.embed.color == 16751710 then
-                local eplayer, euserid = v.author.username:match("^[^%s]+"), v.author.username:match("%b[]"):match("%d+")
+                local eplayer = v.embed.fields[1].value:match("^[^%s]+")
+                eplayer = eplayer:sub(2,eplayer:len())
                 if eplayer == player then
                     if date.parseISO(v.timestamp) < date.parseISO(message.timestamp) then
                         if awaiting[player] then
@@ -98,7 +99,7 @@ function runcron()
 end
 
 function initializenew()
-    local logmessages = logchannel:getMessages(100)
+    templog = logchannel:getMessages(100)
     local messages = appealchannel:getMessages(100)
     appealtable = {}
     for _,v in messages:__pairs() do
@@ -132,7 +133,8 @@ client:on("messageCreate", function(message)
         register(message)
     elseif message.webhookId == logweb then
         if message.embed.color == 16751710 then
-            local player, userid = message.author.username:match("^[^%s]+"), message.author.username:match("%b[]"):match("%d+")
+            local player = message.embed.fields[1].value:match("^[^%s]+")
+            player = player:sub(2,player:len())
             if awaiting[player] then
                 awaiting[player][1]:delete()
                 awaiting[player][2]:delete()
@@ -227,5 +229,4 @@ client:on("ready", function()
     runcron()
 end)
 
--- delete this before pushing to github xd 
 client:run("Bot "..io.read())
