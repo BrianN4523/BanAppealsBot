@@ -1,4 +1,4 @@
-local discordia = require('Discordia')
+local discordia = require('discordia')
 local json = require('json')
 local cron = require('cron.cron')
 local data
