@@ -1,6 +1,7 @@
 local discordia = require('discordia')
 local json = require('json')
 local cron = require('cron.cron')
+local login = io.open("login.txt", "r+")
 local data
 local client = discordia.Client()
 local date = discordia.Date()
@@ -16,6 +17,12 @@ local appealtable = {}
 local awaiting = {}
 local cronstorage = {}
 local templog = {}
+
+if login:read() == nil then
+    print("Please enter a login token")
+    login:write(io.read())
+    login:close()
+end
 
 function overwritedata(new)
     local temp = io.open("settings.json", "r+")
