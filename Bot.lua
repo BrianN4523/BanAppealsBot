@@ -233,4 +233,4 @@ client:on("ready", function()
     runcron()
 end)
 
-client:run("Bot "..io.read())
+client:run("Bot "..io.open("login.txt", "r"):read())
