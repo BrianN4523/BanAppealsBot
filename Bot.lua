@@ -42,7 +42,7 @@ end
 function awaitembed(message, count, ratio)
     local embed = message.embed
     local player, userid = message.author.username:match("^[^%s]+"), message.author.username:match("%b[]"):match("%d+")
-    awaiting[player] = {message, message:reply{
+    awaiting[userid] = {message, message:reply{
         embed = {
             title = "Ban Appeal Approved!", 
             description = string.format("[%s](https://discord.com/channels/%s/%s/%s) has been unbanned with a like count of %s and a like ratio of %d%%.", player, message.guild.id, message.channel.id, message.id, count, ratio),
@@ -55,14 +55,13 @@ function awaitembed(message, count, ratio)
     for _,v in templog:__pairs() do
         if v.embed then
             if v.embed.color == 16751710 then
-                local eplayer = v.embed.fields[1].value:match("^[^%s]+")
-                eplayer = eplayer:sub(2,eplayer:len())
-                if eplayer == player then
-                    if date.parseISO(v.timestamp) < date.parseISO(message.timestamp) then
-                        if awaiting[player] then
-                            awaiting[player][1]:delete()
-                            awaiting[player][2]:delete()
-                            awaiting[player] = nil
+                local euserid = v.embed.fields[1].value:match("%b()"):match("%d+")
+                if euserid == userid then
+                    if date.parseISO(v.timestamp) > date.parseISO(message.timestamp) then
+                        if awaiting[euserid] then
+                            awaiting[euserid][1]:delete()
+                            awaiting[euserid][2]:delete()
+                            awaiting[euserid] = nil
                         end
                     end
                 end
@@ -144,12 +143,11 @@ client:on("messageCreate", function(message)
         register(message)
     elseif message.webhookId == logweb then
         if message.embed.color == 16751710 then
-            local player = message.embed.fields[1].value:match("^[^%s]+")
-            player = player:sub(2,player:len())
-            if awaiting[player] then
-                awaiting[player][1]:delete()
-                awaiting[player][2]:delete()
-                awaiting[player] = nil
+            local userid = message.embed.fields[1].value:match("%b()"):match("%d+")
+            if awaiting[userid] then
+                awaiting[userid][1]:delete()
+                awaiting[userid][2]:delete()
+                awaiting[userid] = nil
             end
         end
     elseif message.author.id == "201461802406641664" then
