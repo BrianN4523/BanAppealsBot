@@ -62,6 +62,7 @@ function awaitembed(message, count, ratio)
                             awaiting[euserid][1]:delete()
                             awaiting[euserid][2]:delete()
                             awaiting[euserid] = nil
+                            appealtable[userid] = nil
                         end
                     end
                 end
@@ -70,8 +71,9 @@ function awaitembed(message, count, ratio)
     end
 end
 
-function periodiccheck(message)
+function periodiccheck(userid)
     local liked, disliked
+    local message = appealtable[userid]
     for _,v in message.reactions:__pairs() do
         if v.emojiHash == "👍" then
             liked = v.count - 1
@@ -86,16 +88,17 @@ function periodiccheck(message)
     if liked >= approvalcount and ratio > approvalratio then
         awaitembed(message, liked, ratio)
     else
-        appealtable[message.id] = nil
+        appealtable[userid] = nil
         message:delete()
     end
 end
 
 function register(message)
-    appealtable[message.id] = message
+    local userid = message.author.username:match("%b[]"):match("%d+")
+    appealtable[userid] = message
     message:addReaction("👍")
     message:addReaction("👎")
-    table.insert(cronstorage, cron.after(date.parseISO(message.timestamp) + pause, periodiccheck, appealtable[message.id]))
+    table.insert(cronstorage, cron.after(date.parseISO(message.timestamp) + pause, periodiccheck, userid))
 end
 
 function runcron()
@@ -123,13 +126,15 @@ end
 
 client:on("reactionAddUncached", function(channel, messageId, hash, userId)
     if userId ~= botuserid and userid == appealweb then
-        appealtable[messageId] = appealchannel:getMessage(messageId)
+        local userid = message.author.username:match("%b[]"):match("%d+")
+        appealtable[userid] = appealchannel:getMessage(messageId)
     end
 end)
 
 client:on("reactionAdd", function(reaction, userId)
     if userId ~= botuserid and userid == appealweb then
-        appealtable[reaction.message.id] = reaction.message
+        local userid = message.author.username:match("%b[]"):match("%d+")
+        appealtable[userid] = reaction.message
     end
 end)
 
@@ -144,10 +149,11 @@ client:on("messageCreate", function(message)
     elseif message.webhookId == logweb then
         if message.embed.color == 16751710 then
             local userid = message.embed.fields[1].value:match("%b()"):match("%d+")
-            if awaiting[userid] then
+            if appealtable[userid] then
                 awaiting[userid][1]:delete()
                 awaiting[userid][2]:delete()
                 awaiting[userid] = nil
+                appealtable[usreid] = nil
             end
         end
     elseif message.author.id == "201461802406641664" then
