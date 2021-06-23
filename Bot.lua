@@ -53,7 +53,6 @@ function awaitembed(userid, count, ratio)
             }
         }
     }}
-    print(1)
     for _,v in templog:__pairs() do
         if v.embed then
             if v.embed.color == 16751710 then
