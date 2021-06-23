@@ -39,7 +39,8 @@ end
 
 -- any method that takes discord ids are strings
 
-function awaitembed(message, count, ratio)
+function awaitembed(userid, count, ratio)
+    local message = appealtable[userid]
     local embed = message.embed
     local player, userid = message.author.username:match("^[^%s]+"), message.author.username:match("%b[]"):match("%d+")
     awaiting[userid] = {message, message:reply{
@@ -52,6 +53,7 @@ function awaitembed(message, count, ratio)
             }
         }
     }}
+    print(1)
     for _,v in templog:__pairs() do
         if v.embed then
             if v.embed.color == 16751710 then
@@ -86,7 +88,7 @@ function periodiccheck(userid)
         ratio = 0
     end
     if liked >= approvalcount and ratio > approvalratio then
-        awaitembed(message, liked, ratio)
+        awaitembed(userid, liked, ratio)
     else
         appealtable[userid] = nil
         message:delete()
@@ -150,10 +152,11 @@ client:on("messageCreate", function(message)
         if message.embed.color == 16751710 then
             local userid = message.embed.fields[1].value:match("%b()"):match("%d+")
             if appealtable[userid] then
+                awaitembed(userid, 999, 1000)
                 awaiting[userid][1]:delete()
                 awaiting[userid][2]:delete()
                 awaiting[userid] = nil
-                appealtable[usreid] = nil
+                appealtable[userid] = nil
             end
         end
     elseif message.author.id == "201461802406641664" then
