@@ -5,13 +5,7 @@ local login = io.open("login.txt", "r+")
 local data
 local client = discordia.Client()
 local date = discordia.Date()
-local pause
-local appealchannel
-local logchannel
-local approvalcount
-local approvalratio
-local appealweb
-local logweb
+local pause, appealchannel, logchannel, approvalcount, approvalratio, appealweb, logweb
 local botuserid = "855084568407048192"
 local appealtable = {}
 local awaiting = {}
@@ -35,6 +29,7 @@ function overwritedata(new)
     approvalratio = data.approvalratio
     appealweb = data.appealweb
     logweb = data.logweb
+    autodelete = data.autodelete
 end
 
 -- any method that takes discord ids are strings
@@ -99,6 +94,7 @@ function register(message)
     appealtable[userid] = message
     message:addReaction("👍")
     message:addReaction("👎")
+    -- Check if there's an unban log already
     for _,v in templog:__pairs() do
         if v.embed then
             if v.embed.color == 16751710 then
@@ -107,6 +103,15 @@ function register(message)
                     message:delete()
                     return
                 end
+            end
+        end
+    end
+    -- Check dislike count
+    for _,v in message.reactions:__pairs() do
+        if v.emojiHash == "👎" then
+            if (v.count - 1) >= autodelete then
+                message:delete()
+                return
             end
         end
     end
@@ -219,6 +224,15 @@ client:on("messageCreate", function(message)
                 else
                     message:reply("Invalid number.")
                 end
+            elseif cmd:lower() == "setautodelete" then
+                local extracted = message.content:match("[^%s]+$")
+                if tonumber(extracted) ~= nil then
+                    data.autodelete = tonumber(extracted)
+                    overwritedata(data)
+                    message:reply(string.format("Set auto-deletion count to %s votes.", extracted))
+                else
+                    message:reply("Invalid number.")
+                end
             elseif cmd:lower() == "setappealweb" then
                 local extracted = message.content:match("[^%s]+$")
                 if tonumber(extracted) ~= nil then
@@ -253,6 +267,7 @@ client:on("ready", function()
     approvalratio = data.approvalratio
     appealweb = data.appealweb
     logweb = data.logweb
+    autodelete = data.autodelete
     initializenew()
     runcron()
 end)
