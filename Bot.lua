@@ -94,7 +94,7 @@ function register(message)
     appealtable[userid] = message
     message:addReaction("👍")
     message:addReaction("👎")
-    -- Check if there's an unban log already
+    --[[ Check if there's an unban log already
     for _,v in templog:__pairs() do
         if v.embed then
             if v.embed.color == 16751710 then
@@ -105,17 +105,24 @@ function register(message)
                 end
             end
         end
-    end
+    end]]--
     -- Check dislike count
+    CheckDislike(message)
+    table.insert(cronstorage, cron.after(date.parseISO(message.timestamp) + pause, periodiccheck, userid))
+end
+
+function CheckDislike(message)
+    print(1)
+    local userid = message.author.username:match("%b[]"):match("%d+")
     for _,v in message.reactions:__pairs() do
         if v.emojiHash == "👎" then
             if (v.count - 1) >= autodelete then
                 message:delete()
+                appealtable[userid] = nil
                 return
             end
         end
     end
-    table.insert(cronstorage, cron.after(date.parseISO(message.timestamp) + pause, periodiccheck, userid))
 end
 
 function runcron()
@@ -141,17 +148,20 @@ function initializenew()
     end
 end
 
-client:on("reactionAddUncached", function(channel, messageId, hash, userId)
-    if userId ~= botuserid and userid == appealweb then
+--[[client:on("reactionAddUncached", function(channel, messageId, hash, userId)
+    if userId ~= botuserid and userId == appealweb then
+        local message = appealchannel:getMessage(messageId)
         local userid = message.author.username:match("%b[]"):match("%d+")
-        appealtable[userid] = appealchannel:getMessage(messageId)
+        appealtable[userid] = message
+        CheckDislike(message)
     end
-end)
+end)]]--
 
 client:on("reactionAdd", function(reaction, userId)
-    if userId ~= botuserid and userid == appealweb then
-        local userid = message.author.username:match("%b[]"):match("%d+")
+    if userId ~= botuserid and reaction.message.author.id == appealweb then
+        local userid = reaction.message.author.username:match("%b[]"):match("%d+")
         appealtable[userid] = reaction.message
+        CheckDislike(reaction.message)
     end
 end)
 
