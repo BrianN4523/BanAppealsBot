@@ -95,10 +95,21 @@ function periodiccheck(userid)
 end
 
 function register(message)
-    local userid = message.author.username:match("%b[]"):match("%d+")
+    local userid = message.embed.fields[1].value:match("[^%s]+$")
     appealtable[userid] = message
     message:addReaction("👍")
     message:addReaction("👎")
+    for _,v in templog:__pairs() do
+        if v.embed then
+            if v.embed.color == 16751710 then
+                local euserid = v.embed.fields[1].value:match("%b()"):match("%d+")
+                if euserid == userid then
+                    message:delete()
+                    return
+                end
+            end
+        end
+    end
     table.insert(cronstorage, cron.after(date.parseISO(message.timestamp) + pause, periodiccheck, userid))
 end
 
