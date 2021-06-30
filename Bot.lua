@@ -77,15 +77,17 @@ function periodiccheck(userid)
             disliked = v.count - 1
         end
     end
-    local ratio = math.floor(liked/(liked + disliked)*100+.5)
-    if ratio ~= ratio then
-        ratio = 0
-    end
-    if liked >= approvalcount and ratio > approvalratio then
-        awaitembed(userid, liked, ratio)
-    else
-        appealtable[userid] = nil
-        message:delete()
+    if liked ~= nil and disliked ~= nil then
+        local ratio = math.floor(liked/(liked + disliked)*100+.5)
+        if ratio ~= ratio then
+            ratio = 0
+        end
+        if liked >= approvalcount and ratio > approvalratio then
+            awaitembed(userid, liked, ratio)
+        else
+            appealtable[userid] = nil
+            message:delete()
+        end
     end
 end
 
@@ -112,7 +114,6 @@ function register(message)
 end
 
 function CheckDislike(message)
-    print(1)
     local userid = message.author.username:match("%b[]"):match("%d+")
     for _,v in message.reactions:__pairs() do
         if v.emojiHash == "👎" then
@@ -177,7 +178,6 @@ client:on("messageCreate", function(message)
         if message.embed.color == 16751710 then
             local userid = message.embed.fields[1].value:match("%b()"):match("%d+")
             if appealtable[userid] then
-                awaitembed(userid, 999, 1000)
                 awaiting[userid][1]:delete()
                 awaiting[userid][2]:delete()
                 awaiting[userid] = nil
