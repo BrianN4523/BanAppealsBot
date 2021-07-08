@@ -1,6 +1,7 @@
 local discordia = require('discordia')
 local json = require('json')
 local cron = require('cron.cron')
+local http = require('coro-http')
 local login = io.open("login.txt", "r+")
 local data
 local client = discordia.Client()
@@ -12,10 +13,19 @@ local awaiting = {}
 local cronstorage = {}
 local templog = {}
 
+function getusername(userid)
+    local result, body = http.request("GET", "https://users.roblox.com/v1/users/"..userid)
+    return json.decode(body)
+end
+
 if login:read() == nil then
     print("Please enter a login token")
     login:write(io.read())
     login:close()
+end
+
+function getidfromappeal(message)
+    return message.embed.fields[1].value:match("[%S^%c]+$")
 end
 
 function overwritedata(new)
@@ -37,7 +47,7 @@ end
 function awaitembed(userid, count, ratio)
     local message = appealtable[userid]
     local embed = message.embed
-    local player, userid = message.author.username:match("^[^%s]+"), message.author.username:match("%b[]"):match("%d+")
+    local player = getusername(userid).name
     awaiting[userid] = {message, message:reply{
         embed = {
             title = "Ban Appeal Approved!", 
@@ -94,7 +104,7 @@ function periodiccheck(userid)
 end
 
 function register(message)
-    local userid = message.embed.fields[1].value:match("[^%s]+$")
+    local userid = getidfromappeal(message)
     appealtable[userid] = message
     message:addReaction("👍")
     message:addReaction("👎")
@@ -116,12 +126,13 @@ function register(message)
 end
 
 function CheckDislike(message)
-    local userid = message.author.username:match("%b[]"):match("%d+")
+    local userid = getidfromappeal(message)
     for _,v in message.reactions:__pairs() do
         if v.emojiHash == "👎" then
             if (v.count - 1) >= autodelete then
                 message:delete()
                 appealtable[userid] = nil
+                awaiting[userid] = nil
                 return
             end
         end
@@ -162,7 +173,7 @@ end)]]--
 
 client:on("reactionAdd", function(reaction, userId)
     if userId ~= botuserid and reaction.message.author.id == appealweb then
-        local userid = reaction.message.author.username:match("%b[]"):match("%d+")
+        local userid = getidfromappeal(reaction.message)
         appealtable[userid] = reaction.message
         CheckDislike(reaction.message)
     end
@@ -180,7 +191,6 @@ client:on("messageCreate", function(message)
         if message.embed.color == 16751710 then
             local userid = message.embed.fields[1].value:match("%b()"):match("%d+")
             if appealtable[userid] then
-                print(userid)
                 if awaiting[userid] then
                     awaiting[userid][1]:delete()
                     awaiting[userid][2]:delete()
