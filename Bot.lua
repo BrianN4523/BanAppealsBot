@@ -70,23 +70,25 @@ end
 function periodiccheck(userid)
     local liked, disliked
     local message = appealtable[userid]
-    for _,v in message.reactions:__pairs() do
-        if v.emojiHash == "👍" then
-            liked = v.count - 1
-        elseif v.emojiHash == "👎" then
-            disliked = v.count - 1
+    if message ~= nil then
+        for _,v in message.reactions:__pairs() do
+            if v.emojiHash == "👍" then
+                liked = v.count - 1
+            elseif v.emojiHash == "👎" then
+                disliked = v.count - 1
+            end
         end
-    end
-    if liked ~= nil and disliked ~= nil then
-        local ratio = math.floor(liked/(liked + disliked)*100+.5)
-        if ratio ~= ratio then
-            ratio = 0
-        end
-        if liked >= approvalcount and ratio > approvalratio then
-            awaitembed(userid, liked, ratio)
-        else
-            appealtable[userid] = nil
-            message:delete()
+        if liked ~= nil and disliked ~= nil then
+            local ratio = math.floor(liked/(liked + disliked)*100+.5)
+            if ratio ~= ratio then
+                ratio = 0
+            end
+            if liked >= approvalcount and ratio > approvalratio then
+                awaitembed(userid, liked, ratio)
+            else
+                appealtable[userid] = nil
+                message:delete()
+            end
         end
     end
 end
@@ -178,9 +180,12 @@ client:on("messageCreate", function(message)
         if message.embed.color == 16751710 then
             local userid = message.embed.fields[1].value:match("%b()"):match("%d+")
             if appealtable[userid] then
-                awaiting[userid][1]:delete()
-                awaiting[userid][2]:delete()
-                awaiting[userid] = nil
+                print(userid)
+                if awaiting[userid] then
+                    awaiting[userid][1]:delete()
+                    awaiting[userid][2]:delete()
+                    awaiting[userid] = nil
+                end
                 appealtable[userid] = nil
             end
         end
