@@ -8,6 +8,7 @@ local client = discordia.Client()
 local date = discordia.Date()
 local pause, appealchannel, logchannel, approvalcount, approvalratio, appealweb, logweb
 local botuserid = "855084568407048192"
+local uptime = os.time()
 local appealtable = {}
 local awaiting = {}
 local cronstorage = {}
@@ -276,6 +277,8 @@ client:on("messageCreate", function(message)
                 else
                     message:reply("Invalid number.")
                 end
+            elseif cmd:lower() == "uptime" then
+                message:reply(string.format("This bot has been up for %d seconds.", os.time() - uptime))
             end
         end
     end
