@@ -146,7 +146,7 @@ function checkreactions(message)
         return
     end
 end
-
+--tes
 function runcron()
     for i,v in pairs(cronstorage) do
         if v:update(os.time()) then
