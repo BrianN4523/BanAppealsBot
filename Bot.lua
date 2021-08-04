@@ -78,7 +78,7 @@ function awaitembed(userid, count, ratio)
     end
 end
 
-function periodiccheck(userid)
+function fetchstats(userid)
     local liked, disliked
     local message = appealtable[userid]
     if message ~= nil then
@@ -93,7 +93,17 @@ function periodiccheck(userid)
             local ratio = math.floor(liked/(liked + disliked)*100+.5)
             if ratio ~= ratio then
                 ratio = 0
+                return liked, disliked, ratio
             end
+        end
+    end
+end
+
+function periodiccheck(userid)
+    local message = appealtable[userid]
+    local liked, disliked, ratio = fetchstats(userid)
+    if message ~= nil then
+        if liked ~= nil and disliked ~= nil then
             if liked >= approvalcount and ratio > approvalratio then
                 awaitembed(userid, liked, ratio)
             else
@@ -121,22 +131,19 @@ function register(message)
             end
         end
     end]]--
-    -- Check dislike count
-    CheckDislike(message)
+    -- Check reaction count
+    checkreactions(message)
     table.insert(cronstorage, cron.after(date.parseISO(message.timestamp) + pause, periodiccheck, userid))
 end
 
-function CheckDislike(message)
+function checkreactions(message)
     local userid = getidfromappeal(message)
-    for _,v in message.reactions:__pairs() do
-        if v.emojiHash == "👎" then
-            if (v.count - 1) >= autodelete then
-                message:delete()
-                appealtable[userid] = nil
-                awaiting[userid] = nil
-                return
-            end
-        end
+    local liked, disliked, ratio = fetchstats(userid)
+    if disliked >= autodelete then
+        message:delete()
+        appealtable[userid] = nil
+        awaiting[userid] = nil
+        return
     end
 end
 
@@ -176,7 +183,7 @@ client:on("reactionAdd", function(reaction, userId)
     if userId ~= botuserid and reaction.message.author.id == appealweb then
         local userid = getidfromappeal(reaction.message)
         appealtable[userid] = reaction.message
-        CheckDislike(reaction.message)
+        checkreactions(reaction.message)
     end
 end)
 
