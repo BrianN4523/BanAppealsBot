@@ -101,8 +101,8 @@ end
 
 function periodiccheck(userid)
     local message = appealtable[userid]
-    local liked, disliked, ratio = fetchstats(userid)
-    if message ~= nil then
+    if message ~= nil and awaiting[userid] == nil then
+        local liked, disliked, ratio = fetchstats(userid)
         if liked ~= nil and disliked ~= nil then
             if liked >= approvalcount and ratio > approvalratio then
                 awaitembed(userid, liked, ratio)
@@ -144,9 +144,11 @@ function checkreactions(message)
         appealtable[userid] = nil
         awaiting[userid] = nil
         return
+    elseif liked >= approvalcount and ratio > approvalratio and awaiting[userid] == nil then
+        awaitembed(userid, liked, ratio)
     end
 end
---tes
+
 function runcron()
     for i,v in pairs(cronstorage) do
         if v:update(os.time()) then
