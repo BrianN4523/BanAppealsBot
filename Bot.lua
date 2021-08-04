@@ -93,8 +93,8 @@ function fetchstats(userid)
             local ratio = math.floor(liked/(liked + disliked)*100+.5)
             if ratio ~= ratio then
                 ratio = 0
-                return liked, disliked, ratio
             end
+            return liked, disliked, ratio
         end
     end
 end
