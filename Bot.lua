@@ -139,12 +139,12 @@ end
 function checkreactions(message)
     local userid = getidfromappeal(message)
     local liked, disliked, ratio = fetchstats(userid)
-    if disliked >= autodelete then
+    if disliked ~= nil and disliked >= autodelete then
         message:delete()
         appealtable[userid] = nil
         awaiting[userid] = nil
         return
-    elseif liked >= approvalcount and ratio > approvalratio and awaiting[userid] == nil then
+    elseif liked ~= nil and liked >= approvalcount and ratio > approvalratio and awaiting[userid] == nil then
         awaitembed(userid, liked, ratio)
     end
 end
