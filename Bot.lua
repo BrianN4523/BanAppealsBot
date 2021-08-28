@@ -9,10 +9,7 @@ local date = discordia.Date()
 local pause, appealchannel, logchannel, approvalcount, approvalratio, appealweb, logweb
 local botuserid = "855084568407048192"
 local uptime = os.time()
-local appealtable = {}
-local awaiting = {}
-local cronstorage = {}
-local templog = {}
+local appealtable, awaiting, cronstorage, templog, replied = {}, {}, {}, {}, {}
 
 function getusername(userid)
     local result, body = http.request("GET", "https://users.roblox.com/v1/users/"..userid)
@@ -26,7 +23,14 @@ if login:read() == nil then
 end
 
 function getidfromappeal(message)
-    return message.embed.fields[1].value:match("[%S^%c]+$")
+    local check, result = pcall(function()
+        return message.embed.fields[1].value:match("[%S^%c]+$")
+    end)
+    if check then
+        return result
+    else
+        return false
+    end
 end
 
 function overwritedata(new)
@@ -69,7 +73,9 @@ function awaitembed(userid, count, ratio)
                             awaiting[euserid][1]:delete()
                             awaiting[euserid][2]:delete()
                             awaiting[euserid] = nil
+                            deletereplies(replied[userid])
                             appealtable[userid] = nil
+                            replied[userid] = nil
                         end
                     end
                 end
@@ -107,7 +113,9 @@ function periodiccheck(userid)
             if liked >= approvalcount and ratio > approvalratio then
                 awaitembed(userid, liked, ratio)
             else
+                deletereplies(replied[userid])
                 appealtable[userid] = nil
+                replied[userid] = nil
                 message:delete()
             end
         end
@@ -116,7 +124,9 @@ end
 
 function register(message)
     local userid = getidfromappeal(message)
+    if appealtable[userid] ~= nil then return end
     appealtable[userid] = message
+    replied[userid] = {}
     message:addReaction("👍")
     message:addReaction("👎")
     --[[ Check if there's an unban log already
@@ -140,9 +150,11 @@ function checkreactions(message)
     local userid = getidfromappeal(message)
     local liked, disliked, ratio = fetchstats(userid)
     if disliked ~= nil and disliked >= autodelete then
-        message:delete()
+        deletereplies(replied[userid])
         appealtable[userid] = nil
+        replied[userid] = nil
         awaiting[userid] = nil
+        message:delete()
         return
     elseif liked ~= nil and liked >= approvalcount and ratio > approvalratio and awaiting[userid] == nil then
         awaitembed(userid, liked, ratio)
@@ -166,9 +178,21 @@ function initializenew()
     for _,v in messages:__pairs() do
         if v.webhookId == appealweb then
             register(v)
-        elseif v.author.id == botuserid then
+        elseif v.referencedMessage ~= nil and v.referencedMessage.webhookId == appealweb then
+            local userid = getidfromappeal(v.referencedMessage)
+            if replied[userid] == nil then
+                register(v.referencedMessage)
+            end
+            table.insert(replied[userid], v)
+        else
             v:delete()
         end
+    end
+end
+
+function deletereplies(replies)
+    for _,message in pairs(replies) do
+        message:delete()
     end
 end
 
@@ -189,7 +213,7 @@ client:on("reactionAdd", function(reaction, userId)
     end
 end)
 
-
+-- I know I should probably make a table for the commands but I'm too lazy :(
 client:on("messageCreate", function(message)
     local success, result = pcall(function()
         runcron()
@@ -206,17 +230,28 @@ client:on("messageCreate", function(message)
                     awaiting[userid][2]:delete()
                     awaiting[userid] = nil
                 end
+                deletereplies(replied[userid])
                 appealtable[userid] = nil
+                replied[userid] = nil
             end
         end
-    elseif message.author.id == "201461802406641664" then
+    elseif message.channel.id == data.appealchannel then
+        local rmessage = message.referencedMessage
+        local userid = getidfromappeal(rmessage)
+        if rmessage ~= nil and userid then
+            table.insert(replied[userid], message)
+        elseif message.author.id ~= botuserid then
+            message:delete()
+        end
+    end
+    if message.author.id == "201461802406641664" then
         if message.content:find('^"') then
             local cmd = message.content:match("^[^%s]+") cmd = cmd:sub(2,cmd:len())
             if cmd:lower() == "ainit" then
                 local extracted = message.content:match("[^%s]+$")
                 if client:getChannel(extracted) then
-                    overwritedata(data)
                     data.appealchannel = extracted
+                    overwritedata(data)
                     message:reply(string.format("Successfully changed ban appeals channel to <#%s>.", extracted))
                     initializenew()
                 else
@@ -225,8 +260,8 @@ client:on("messageCreate", function(message)
             elseif cmd:lower() == "linit" then
                 local extracted = message.content:match("[^%s]+$")
                 if client:getChannel(extracted) then
-                    overwritedata(data)
                     data.logchannel = extracted
+                    overwritedata(data)
                     message:reply(string.format("Successfully changed logs channel to <#%s>.", extracted))
                     initializenew()
                 else
