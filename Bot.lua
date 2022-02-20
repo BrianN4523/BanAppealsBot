@@ -43,6 +43,9 @@ local appealtable = {}
 local awaiting = {}
 local cronstorage = {}
 local templog = {}
+<<<<<<< HEAD
+>>>>>>> parent of da81111 (Added a feature where replies to an embed are also deletes, also any message that doesn't have a reference message will be deleted)
+=======
 >>>>>>> parent of da81111 (Added a feature where replies to an embed are also deletes, also any message that doesn't have a reference message will be deleted)
 
 -- Make changes to settings.json
